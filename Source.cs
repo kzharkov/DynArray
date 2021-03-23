@@ -98,7 +98,12 @@ namespace AlgorithmsDataStructures
 
             T[] new_array = new T[capacity];
             Array.Copy(array, 0, new_array, 0, index);
-            Array.Copy(array, index + 1, new_array, index, count - 1);
+
+            if (count-1 != index)
+            {
+                Array.Copy(array, index + 1, new_array, index, count - 1);
+            }
+            
             array = new_array;
             count--;
         }
