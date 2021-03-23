@@ -35,7 +35,7 @@ namespace AlgorithmsDataStructures
 
         public T GetItem(int index)
         {
-            if (index >= count)
+            if (index >= count || index < 0)
             {
                 throw new IndexOutOfRangeException();
             }
@@ -56,7 +56,7 @@ namespace AlgorithmsDataStructures
 
         public void Insert(T itm, int index)
         {
-            if (index > count)
+            if (index > count || index < 0)
             {
                 throw new IndexOutOfRangeException();
             }
@@ -85,7 +85,7 @@ namespace AlgorithmsDataStructures
 
         public void Remove(int index)
         {
-            if (index >= count)
+            if (index >= count || index < 0)
             {
                 throw new IndexOutOfRangeException();
             }
